@@ -10,6 +10,13 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {DrinkListPage} from "../pages/drink-list/drink-list";
+import {AddDrinkPage} from "../pages/add-drink/add-drink";
+import {SettingsPage} from "../pages/settings/settings";
+import { DrinkProvider } from '../providers/drink/drink';
+import {DrinkDetailsPage} from "../pages/drink-details/drink-details";
+
+
 
 @NgModule({
   declarations: [
@@ -17,7 +24,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    DrinkListPage,
+    AddDrinkPage,
+    SettingsPage,
+    DrinkDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -29,12 +40,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    DrinkListPage,
+    AddDrinkPage,
+    SettingsPage,
+  DrinkDetailsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DrinkProvider
   ]
 })
 export class AppModule {}
